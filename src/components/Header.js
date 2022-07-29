@@ -7,8 +7,8 @@ function Header() {
   return(
     <header className="header-container">
       <div className="title-container ms-5">
-        <h1 className="fs-4 my-0">Luiz Felipe Pereira</h1>
-        <h2 className="fs-5 my-0">Front-End Dev</h2>
+        <h1 className="fs-5 my-0">Luiz Felipe Pereira</h1>
+        <h2 className="fs-6 my-0">Front-End Dev</h2>
       </div>
       <nav className="me-5 nav-container">
         <div className={ pathname === '/' ? "me-5 link-container" : "me-5"}>

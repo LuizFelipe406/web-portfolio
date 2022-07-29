@@ -1,8 +1,13 @@
 import React from "react";
+import Header from "../components/Header";
+import '../style/Home.css';
 
 function Home() {
   return(
-    <div>Eu sou a home page</div>
+    <main className="main-home-page">
+      <Header />
+      <span>Eu sou a home page</span>
+    </main>
   )
 }
 

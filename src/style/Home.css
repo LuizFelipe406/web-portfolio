@@ -5,3 +5,27 @@
   height: 100vh;
   width: 100vw;
 }
+
+.home-title {
+  color: whitesmoke;
+  font-family: 'Ubuntu', sans-serif;
+  font-weight: 800;
+  font-size: 3.5em;
+}
+
+.home-text {
+  color: whitesmoke;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 200;
+  max-width: 40vw;
+}
+
+.home-button {
+  background-color: #dbc690;
+  border: none;
+  border-radius: 20px;
+  box-shadow: 0 0 2.1em #d4ccb6;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 500;
+  text-shadow: 0 0 10px #d4ccb6, 0 0 20px #d4ccb6, 0 0 30px #d4ccb6;
+}

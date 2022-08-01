@@ -18,6 +18,11 @@
   font-weight: 400;
 }
 
+.header-content-container {
+  align-items: center;
+  display: flex;
+}
+
 .title-container {
   align-items: center;
   display: flex;

@@ -1,12 +1,29 @@
 import React from "react";
+import { motion } from "framer-motion";
 import Header from "../components/Header";
 import '../style/About.css';
 
 function About() {
+  const pageTransition = {
+    in: {
+      opacity: 1,
+      x: 0
+    },
+    out: {
+      opacity: 0,
+      x: "100vw"
+    }
+  }
   return(
     <main className="main-about-page">
       <Header />
-      <section className="ms-5 ps-5 mt-5 pt-2">
+      <motion.section
+        variants={ pageTransition }
+        exit="out"
+        initial="out"
+        animate="in"
+        className="ms-5 ps-5 mt-5 pt-2"
+      >
         <div className="ms-5 ps-5 mt-5">
           <h1 className="about-title">About Me</h1>
           <div className="ms-5 mt-4 about-text">
@@ -18,7 +35,7 @@ function About() {
             <button className="about-button py-2 px-4">contact me</button>
           </div>
         </div>
-      </section>
+      </motion.section>
     </main>
   )
 }

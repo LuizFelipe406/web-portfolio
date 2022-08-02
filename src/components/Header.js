@@ -7,7 +7,9 @@ import '../style/Header.css';
 function Header() {
   const { pathname } = useLocation();
   return(
-    <header className="header-container">
+    <header
+      className="header-container"
+    >
       <div className="header-content-container">
         <div className="title-container ms-5">
           <h1 className="fs-5 my-0">Luiz Felipe Pereira</h1>

@@ -6,11 +6,13 @@ import About from './pages/About';
 import Projects from './pages/Projects';
 import Contact from './pages/Contact';
 import './App.css';
+import Header from './components/Header';
 
 function App() {
   const location = useLocation();
   return (
-    <div >
+    <div className="app">
+      <Header />
       <AnimatePresence exitBeforeEnter>
         <Routes location={ location } key={ location.pathname }>
           <Route 
@@ -21,7 +23,8 @@ function App() {
             path="/about"
             element={ <About /> }
           />
-          <Route 
+          <Route
+            key="projects"
             path="/projects"
             element={ <Projects /> }
           />

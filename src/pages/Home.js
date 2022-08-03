@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 import '../style/Home.css';
 
 function Home() {
-  const { pageVariantLeft, pageTransition, mainPageAnimation } = useContext(PageContext);
+  const { pageVariantLeft, outLeft, pageTransition, mainPageAnimation } = useContext(PageContext);
   
   return(
     <motion.main
@@ -17,7 +17,7 @@ function Home() {
     >
       <motion.section
         variants={ pageVariantLeft }
-        exit="out"
+        exit={ outLeft }
         initial="initial"
         animate="in"
         transition={ pageTransition }

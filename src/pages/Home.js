@@ -52,7 +52,7 @@ function Home() {
         initial="initial"
         animate="in"
         transition={ pageTransition }
-        className="ms-5 ps-5 pt-5 section"
+        className="ms-5 ps-5 pt-4 section"
       >
         <div className="ms-5 ps-5 mt-5 pt-4">
           <h1

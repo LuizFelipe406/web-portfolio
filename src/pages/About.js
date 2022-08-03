@@ -1,6 +1,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 import '../style/About.css';
+import { Link } from "react-router-dom";
 
 function About() {
   const pageVariants = {
@@ -51,9 +52,9 @@ function About() {
         initial="initial"
         animate="in"
         transition={ pageTransition }
-        className="ms-5 ps-5 pt-2 section"
+        className="ms-5 ps-5 pt-1 section"
       >
-        <div className="ms-5 ps-5 mt-5">
+        <div className="ms-5 ps-5 mt-4">
           <h1 className="about-title">About Me</h1>
           <div className="ms-5 mt-4 about-text">
             <p>Olá nessa seção vou contar um pouco sobre a minha história</p>
@@ -61,7 +62,7 @@ function About() {
             <p>Saindo do ensino médio em 2020, eu tinha altas expectativas por sempre ter ganho prêmios e altas notas porém não tinha clareza do caminho que gostaria de seguir ainda. Prestei o enem no começo do outro ano e consegui passar em segundo lugar na UDESC pra Engenharia Mecânica seguindo minha paixão por criar coisas, um ano depois percebi que tinha esquecido da segunda parte que era é o computador, não estava feliz ali, mas a experiência foi valiosa, pois nesse ano sempre teve uma matéria que me chamava atenção, Programação para Engenharia.</p>
             <p>Após dois semestres, resolvi mudar o meu caminho, pausei o curso e embarquei em uma nova jornada, a Trybe. Hoje já sou um Desenvolvedor Front-End e estou no processo de formação em Back-End.</p>
             <p>Se consegui te prender até o final acho que mereço uma oportunidade sua, clique no botão abaixo para entrar em contato comigo, vamos nos conhecer!</p>
-            <button className="about-button py-2 px-4">contact me</button>
+            <Link to="/contact"><button className="about-button py-2 px-4">contact me</button></Link>
           </div>
         </div>
       </motion.section>

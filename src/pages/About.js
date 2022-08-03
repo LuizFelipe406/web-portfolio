@@ -1,54 +1,33 @@
-import React from "react";
+import React, { useContext } from "react";
 import { motion } from "framer-motion";
 import '../style/About.css';
 import { Link } from "react-router-dom";
+import PageContext from "../context/pageContext";
 
 function About() {
-  const pageVariants = {
-    initial: {
-      opacity: 0,
-      x: "100vw",
-      scale: 0.8
-    },
-    in: {
-      opacity: 1,
-      x: 0,
-      scale: 1
-    },
-    out: {
-      opacity: 0,
-      x: "100vw",
-      scale: 0.8
-    }
-  }
-
-  const pageTransition = {
-    type: "tween",
-    ease: "linear",
-    duration: 0.5
-  }
-
-  const container = {
-    hidden: { opacity: 0 },
-    show: {
-      opacity: 1,
-      transition: {
-        duration: 0.5
-      }
-    }
-  }
+  const id = 2;
+  const {
+    pageVariantLeft,
+    outLeft,
+    pageVariantRight,
+    outRight,
+    pageTransition,
+    mainPageAnimation,
+    newPageNum,
+    prevPageNum,
+  } = useContext(PageContext);
 
   return(
     <motion.main
       className="main-about-page"
-      variants={container}
+      variants={mainPageAnimation}
       initial="hidden"
       animate="show"
       exit="hidden"
     >
       <motion.section
-        variants={ pageVariants }
-        exit="out"
+        variants={ id > prevPageNum ? pageVariantRight : pageVariantLeft }
+        exit={ id > newPageNum ? outRight : outLeft }
         initial="initial"
         animate="in"
         transition={ pageTransition }

@@ -45,6 +45,8 @@
 }
 
 .link-text {
+  border: none;
+  background-color: transparent;
   color: whitesmoke;
   font-family: 'Montserrat', sans-serif;
   font-weight: 400;

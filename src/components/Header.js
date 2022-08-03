@@ -1,11 +1,27 @@
-import React from 'react';
-import { Link, useLocation } from 'react-router-dom';
+import React, { useContext } from 'react';
+import { useLocation, useNavigate } from 'react-router-dom';
 import linkedin from '../images/linkedin-logo.png';
 import github from '../images/github-icon-2.png';
 import '../style/Header.css';
+import PageContext from '../context/pageContext';
 
 function Header() {
   const { pathname } = useLocation();
+  const { setPrevPageNum, setNewPageNum } = useContext(PageContext);
+  const navigate = useNavigate();
+
+  const handleClick = ( nextPage, pageName ) => {
+    if (pathname !== pageName) {
+      switch (pathname) {
+        case '/': setPrevPageNum(1); break;
+        case '/about': setPrevPageNum(2); break;
+        case '/projects': setPrevPageNum(3); break;
+        default: setPrevPageNum(4);
+      }
+      setNewPageNum(nextPage);
+      navigate(pageName);
+    }
+  }
   return(
     <header
       className="header-container"
@@ -26,19 +42,39 @@ function Header() {
       </div>
       <nav className="me-5 nav-container">
         <div className={ pathname === '/' ? "me-5 link-container" : "me-5"}>
-          <Link className="link-text" to="/">home</Link>
+          <button
+            className="link-text"
+            onClick={ () => handleClick(1, '/') }
+            >
+              home
+            </button>
           <div className={ pathname === '/' ? "underline" : ""}/>
         </div>
         <div className={ pathname === '/about' ? "me-5 link-container" : "me-5"}>
-          <Link className="link-text" to="/about">about</Link>
+          <button
+            className="link-text"
+            onClick={ () => handleClick(2, '/about') }
+          >
+            about
+          </button>
           <div className={ pathname === '/about' ? "underline" : ""}/>
         </div>
         <div className={ pathname === '/projects' ? "me-5 link-container" : "me-5"}>
-          <Link className="link-text" to="/projects">projects</Link>
+          <button
+            className="link-text"
+            onClick={ () => handleClick(3, '/projects') }
+          >
+            projects
+          </button>
           <div className={ pathname === '/projects' ? "underline" : ""}/>
         </div>
         <div className={ pathname === '/contact' ? "me-5 link-container" : "me-5"}>
-          <Link className="link-text" to="/contact">contact</Link>
+          <button
+            className="link-text"
+            onClick={ () => handleClick(4, '/contact') }
+          >
+              contact
+          </button>
           <div className={ pathname === '/contact' ? "underline" : ""}/>
         </div>
       </nav>

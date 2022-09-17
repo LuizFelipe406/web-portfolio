@@ -1,0 +1,52 @@
+.main-card {
+  width: 360px;
+  border: 1px solid whitesmoke;
+}
+
+.card-body {
+  background-color: #403d39;
+  border: 1px solid whitesmoke;
+  height: 40vh;
+}
+
+.card-image {
+  height: 28vh;
+  width: 100%;
+  object-fit: cover;
+  object-position: top;
+}
+
+.card-image-overlay {
+  background-color: rgba(19, 16, 16, 0.7);
+  height: 28vh;
+  width: 100%;
+  border: 1px solid whitesmoke;
+}
+
+.card-title {
+  color: whitesmoke;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400;
+  transition: 1s;
+}
+
+.card-image-overlay:hover {
+  color: whitesmoke;
+  text-shadow: 0 0 10px whitesmoke, 0 0 20px whitesmoke, 0 0 30px whitesmoke;
+}
+
+.card-text {
+  color: whitesmoke;
+  text-align: justify;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400;
+}
+
+.repo-text a {
+  text-decoration: none;
+  color: #DeC273;
+}
+
+.repo-text {
+  text-align: center;
+}

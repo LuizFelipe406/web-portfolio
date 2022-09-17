@@ -29,7 +29,7 @@ function Header() {
       <div className="header-content-container">
         <div className="title-container ms-5">
           <h1 className="fs-5 my-0">Luiz Felipe Pereira</h1>
-          <h2 className="fs-6 my-0">Front-End Dev</h2>
+          <h2 className="fs-6 my-0">Full-Stack Dev</h2>
         </div>
         <div className="ms-4">
           <a href="https://www.linkedin.com/in/luizfpereira406/" target="_blank" rel="noreferrer">

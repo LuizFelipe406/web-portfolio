@@ -1,0 +1,73 @@
+.main-contact-page {
+  background-size: cover;
+  background-position: center;
+  background-image: url('../images/portfolioBackground2.png');
+  overflow-x: hidden;
+  overflow-y: hidden;
+  position: absolute;
+  height: 100vh;
+  width: 100vw;
+  z-index: 0;
+}
+
+.contact-title {
+  color: whitesmoke;
+  font-family: 'Ubuntu', sans-serif;
+  font-weight: 800;
+  font-size: 3.5em;
+}
+
+.contact-text {
+  color: whitesmoke;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 200;
+  max-width: 40vw;
+}
+
+.button-style {
+  color: whitesmoke;
+  border: none;
+  border-radius: 20px;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 300;
+  transition: 1s;
+}
+
+.linkedin-button {
+  background-color: transparent;
+  color: #17a5e7;
+  border: 1px solid #0e76a8;
+}
+
+.linkedin-button:hover {
+  color: whitesmoke;
+  background-color: #0e76a8;
+  box-shadow: 0 0 2.1em #0e76a8;
+  text-shadow: 0 0 10px whitesmoke, 0 0 20px whitesmoke, 0 0 30px whitesmoke;
+}
+
+.whatsapp-button {
+  color: #25D366;
+  background-color: transparent;
+  border: 1px solid #25D366;
+}
+
+.whatsapp-button:hover {
+  color: black;
+  background-color: #25D366;
+  box-shadow: 0 0 2.1em #25D366;
+  text-shadow: 0 0 10px black, 0 0 20px black, 0 0 30px black;
+}
+
+.email-button {
+  background-color: transparent;
+  color: #DB4437;
+  border: 1px solid #DB4437;
+}
+
+.email-button:hover {
+  color: whitesmoke;
+  background-color: #DB4437;
+  box-shadow: 0 0 2.1em #DB4437;
+  text-shadow: 0 0 10px whitesmoke, 0 0 20px whitesmoke, 0 0 30px whitesmoke;
+}
